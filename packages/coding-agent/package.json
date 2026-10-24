@@ -10,7 +10,7 @@
   "main": "dist/cli.mjs",
   "files": ["dist", "README.md", "LICENSE"],
   "bin": {
-    "tca": "./dist/cli.mjs"
+    "tca": "dist/cli.mjs"
   },
   "scripts": {
     "dev": "tsx --env-file=../../.env src/cli.ts",

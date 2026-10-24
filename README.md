@@ -1,6 +1,6 @@
 # TinyCodingAgent
 
-这一个简陋的编码Agent，也是我的第一个终端Agent项目（模仿[Pi](https://pi.dev/)做的）<br>
+这是一个非常简陋的编码Agent，也是我的第一个终端Agent项目（参考[Pi](https://pi.dev/)开发）<br>
 它基于TS和Node内置API，没有使用任何第三方运行时依赖（目的是暴露一切细节）<br>
 目前它只是一个学习项目，或许能帮你从真实Agent的代码角度理解LoopEngineering（核心代码约100行）
 
@@ -11,24 +11,26 @@
 
 你可以从npm快速安装它，需要 Node.js 24.10.0 或更高版本。
 
-```json
+```bash
 // 安装
 npm install -g @tinycodingagent/coding-agent
 // 更新
 npm update -g @tinycodingagent/coding-agent
-// 启动
-tca
 // 配置
+tca
+// 启动
 tca config
 ```
 
-配置文件位于 `<用户名>/.tinycodingagent/auth.json`，也可以手动设置：
+配置文件位于 `~/.tinycodingagent/auth.json`，可以运行 `tca config` 设置，也可以手动创建：
 
 ```json
-MODEL= //模型名称，比如:deepseek-flash
-API_KEY= //厂商的KEY,需要申请前往:https://platform.deepseek.com/api_keys
-BASE_URL=//模型的路径,比如:https://api.deepseek.com
-CONTEXT_WINDOW=//模型最大上下文,留空时不启动自动上下文压缩，比如 DeepSeek-V4 系列模型最大上下文为:1048576
+{
+  "MODEL": "deepseek-flash",
+  "API_KEY": "你的 API Key",
+  "BASE_URL": "https://api.deepseek.com",
+  "CONTEXT_WINDOW": "1000000" //可选，模型最大上下文，为空时不启用上下文自动压缩
+}
 ```
 
 ## 技术简介
@@ -38,7 +40,7 @@ CONTEXT_WINDOW=//模型最大上下文,留空时不启动自动上下文压缩�
 - `@tinycodingagent/agent` 实现 Agent 循环与上下文压缩
 - `@tinycodingagent/ai` 定义模型接口并提供接口OpenaiAPI兼容器
 
-```json
+```text
 TinyCodingAgent/
 ├── packages/
 │   ├── coding-agent/
