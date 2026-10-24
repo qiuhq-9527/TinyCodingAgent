@@ -1,0 +1,11 @@
+{
+  "name": "@tinycodingagent/ai",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.mjs",
+  "types": "dist/index.d.mts",
+  "scripts": {
+    "build": "tsdown"
+  }
+}

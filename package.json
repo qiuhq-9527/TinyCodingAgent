@@ -1,0 +1,21 @@
+{
+  "name": "TinyCodingAgent",
+  "private": true,
+  "version": "0.0.1",
+  "license": "MIT",
+  "type": "module",
+  "packageManager": "pnpm@10.33.2",
+  "scripts": {
+    "dev": "pnpm --filter @tinycodingagent/coding-agent dev",
+    "build": "pnpm --filter @tinycodingagent/ai build && pnpm --filter @tinycodingagent/agent build && pnpm --filter @tinycodingagent/coding-agent build",
+    "build:ai": "pnpm --filter @tinycodingagent/ai build",
+    "build:agent": "pnpm --filter @tinycodingagent/agent build",
+    "build:coding-agent": "pnpm --filter @tinycodingagent/coding-agent build"
+  },
+  "devDependencies": {
+    "@types/node": "24",
+    "tsdown": "0.22.14",
+    "tsx": "4.23.13",
+    "typescript": "7.0.2"
+  }
+}

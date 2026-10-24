@@ -1,0 +1,24 @@
+{
+  "name": "@tinycodingagent/coding-agent",
+  "version": "0.0.1",
+  "description": "Terminal AI coding agent",
+  "license": "MIT",
+  "engines": {
+    "node": ">=24.10.0"
+  },
+  "type": "module",
+  "main": "dist/cli.mjs",
+  "files": ["dist", "README.md", "LICENSE"],
+  "bin": {
+    "tca": "./dist/cli.mjs"
+  },
+  "scripts": {
+    "dev": "tsx --env-file=../../.env src/cli.ts",
+    "build": "tsdown",
+    "prepack": "pnpm --filter @tinycodingagent/ai build && pnpm --filter @tinycodingagent/agent build && pnpm --filter @tinycodingagent/coding-agent build"
+  },
+  "devDependencies": {
+    "@tinycodingagent/ai": "workspace:*",
+    "@tinycodingagent/agent": "workspace:*"
+  }
+}
