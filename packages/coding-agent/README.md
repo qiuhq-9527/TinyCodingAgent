@@ -15,9 +15,9 @@ npm install -g @tinycodingagent/coding-agent
 // 更新
 npm update -g @tinycodingagent/coding-agent
 // 配置
-tca
-// 启动
 tca config
+// 启动
+tca
 ```
 
 配置文件位于 `~/.tinycodingagent/auth.json`，可以运行 `tca config` 设置，也可以手动创建：
